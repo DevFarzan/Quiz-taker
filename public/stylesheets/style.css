@@ -1,0 +1,36 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+.text_color{
+   background-color: #ffffff;
+    color:blue;
+}
+.textbox{
+    margin-left: 70px;
+}
+.questiontext{
+    margin-left: 110px;
+}
+.submit_button{
+    margin-left: 110px;
+}
+.nav-bar{
+    //opacity: 0.4;
+}
+.addquiz_textboxes{
+    margin-top: 60px;
+}
+.submitbutton_addquiz{
+    margin-right:110px
+}
+.index_textbox{
+    margin-top: 90px;
+}
+.h4{
+    text-decoration: underline;
+}

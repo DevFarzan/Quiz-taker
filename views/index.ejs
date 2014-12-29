@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/bootstrap.min.css'/>
+  </head>
+  <body>
+  <div class="navbar navbar-default navbar-fixed-top nav-bar">
+      <a class="navbar-brand" href="#">
+          <b>The quiz taker</b>
+
+      </a>
+
+      <div class="navbar-collapse collapse navbar-responsive-collapse">
+
+
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+              </ul>
+        </div>
+    </div>
+
+    <form class="form-inline" method="post" action="/signIn">
+
+    <div class="panel panel-primary index_textbox" align="center" >
+        <div class="panel-body">
+        <label>Name:</label><br/>
+        <input type="text" class="input-small" name="username" placeholder="Name" required><br/><br/>
+        <label>Password</label><br/>
+        <input type="password" class="input-small" name="password" placeholder="Password" required><br/>
+        <label class="checkbox">
+            <input type="checkbox">Remember
+        </label><br/><br/>
+        <button type="submit" class="btn">Submit</button>
+        <a type="submit" class="btn" href="\Signup">SignUP</a>
+        </div>
+    </div>
+  </form>
+
+
+  </body>
+</html>

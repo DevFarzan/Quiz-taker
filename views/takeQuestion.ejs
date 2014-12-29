@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>takeQuestion</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/bootstrap.min.css'/>
+</head>
+<body>
+
+
+<div class="navbar navbar-default navbar-fixed-top nav-bar">
+    <a class="navbar-brand" href="#">
+        <b>The quiz taker</b>
+
+    </a>
+
+    <div class="navbar-collapse collapse navbar-responsive-collapse">
+
+
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Link</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="panel panel-primary" align="center">
+<div align="center"><br/>
+    <span>Select quiz here</span><select class="text_color"><br/>
+        <option>Html</option>
+        <option>Css</option>
+        <option>PHP</option>
+        <option>Sql</option>
+        <option>Html</option>
+
+
+    </select>
+</div>
+<form  method="post" action="/takeQuestion" class="form-horizontal">
+
+   <h4 class="h4">ADD a Question:</h4>
+
+
+    Question<br/> <input type="text" name="question" class="questiontext">
+    <br>
+    <br>
+    <span>Option</span>
+    <ol>
+        <li><input type="text" name="answer1" class="textbox"> </li><br/>
+        <li><input type="text" name="answer2" class="textbox"> </li><br/>
+        <li><input type="text" name="answer3" class="textbox"> </li><br/>
+        <li><input type="text" name="answer4" class="textbox"> </li><br/>
+   </ol>
+
+       <span> Correct Answer:</span><br/><input type="text" name="correctAnswer" class="questiontext"></li><br/><br/>
+
+    <button class="btn btn-default submit_button" value="Submit">Submit</button>
+
+
+</form>
+</div>
+</body>
