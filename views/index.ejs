@@ -2,6 +2,8 @@
 <html>
   <head>
     <title><%= title %></title>
+    <script src="/javascripts/jquery-1.11.2.min.js"></script>
+      <script src="/javascripts/signin.js"></script>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel='stylesheet' href='/stylesheets/bootstrap.min.css'/>
   </head>
@@ -33,22 +35,24 @@
         </div>
     </div>
 
-    <form class="form-inline" method="post" action="/signIn">
+    <form class="form-inline" >
 
     <div class="panel panel-primary index_textbox" align="center" >
         <div class="panel-body">
         <label>Name:</label><br/>
-        <input type="text" class="input-small" name="username" placeholder="Name" required><br/><br/>
+        <input type="text"  id="username" class="input-small" name="username" placeholder="Name" required><br/><br/>
         <label>Password</label><br/>
-        <input type="password" class="input-small" name="password" placeholder="Password" required><br/>
+        <input type="password" id="password" class="input-small" name="password" placeholder="Password" required><br/>
         <label class="checkbox">
             <input type="checkbox">Remember
         </label><br/><br/>
-        <button type="submit" class="btn">Submit</button>
+        <button type="submit" id="submit" class="btn">Submit</button>
         <a type="submit" class="btn" href="\Signup">SignUP</a>
         </div>
     </div>
   </form>
+
+
 
 
   </body>

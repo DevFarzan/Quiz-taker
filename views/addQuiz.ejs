@@ -2,6 +2,9 @@
 <html>
   <head>
     <title>addQuiz</title>
+
+    <script src="/javascripts/jquery-1.11.2.min.js"></script>
+      <script src="/javascripts/addQuiz.js"></script>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel='stylesheet' href='/stylesheets/bootstrap.min.css'/>
   </head>
@@ -31,17 +34,17 @@
         </div>
     </div>
    <div class="addquiz_textboxes panel panel-primary" align="center">
-    <form class="form-inline" method="post" action="/addQuiz">
+    <form class="form-inline">
 
      <label>QuizTitle</label><br/>
-        <input type="text" class="input-small" name="quizTitle" placeholder="Name" required><br/><br/>
+        <input type="text" class="input-small" id="quizTitle" name="quizTitle" placeholder="Name" required><br/><br/>
       <label>QuizDescription</label></form><br/>
-    <textarea>
+    <textarea id="quizDescription">
 
     </textarea><br/>
        <!-- <input type="password" class="input-small" name="quizDescription" placeholder="Password" required>n<br/>-->
 
-        <button class="btn btn-default submit_button" value="Submit">Submit</button>
+        <button class="btn btn-default submit_button" id="submit">Submit</button>
 
 
   </form>

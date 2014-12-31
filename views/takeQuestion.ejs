@@ -44,25 +44,25 @@
 
     </select>
 </div>
-<form  method="post" action="/takeQuestion" class="form-horizontal">
+<form class="form-horizontal">
 
    <h4 class="h4">ADD a Question:</h4>
 
 
-    Question<br/> <input type="text" name="question" class="questiontext">
+    Question<br/> <input type="text" name="question" id="Question" class="questiontext">
     <br>
     <br>
     <span>Option</span>
     <ol>
-        <li><input type="text" name="answer1" class="textbox"> </li><br/>
-        <li><input type="text" name="answer2" class="textbox"> </li><br/>
-        <li><input type="text" name="answer3" class="textbox"> </li><br/>
-        <li><input type="text" name="answer4" class="textbox"> </li><br/>
+        <li><input type="text" name="answer1" id="answer1" class="textbox"> </li><br/>
+        <li><input type="text" name="answer2"  id=answer2 class="textbox"> </li><br/>
+        <li><input type="text" name="answer3"  id="answer3"class="textbox"> </li><br/>
+        <li><input type="text" name="answer4"id="answer4" class="textbox"> </li><br/>
    </ol>
 
        <span> Correct Answer:</span><br/><input type="text" name="correctAnswer" class="questiontext"></li><br/><br/>
 
-    <button class="btn btn-default submit_button" value="Submit">Submit</button>
+    <button class="btn btn-default submit_button" value="Submit" id="submit">Submit</button>
 
 
 </form>

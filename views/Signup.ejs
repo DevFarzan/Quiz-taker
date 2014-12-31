@@ -4,11 +4,13 @@
     <meta charset="utf-8" />
     <title>SignUp</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <script src="/javascripts/jquery-1.11.2.min.js"></script>
+   <!-- <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>-->
+    <script src="/javascripts/signup.js"></script>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel='stylesheet' href='/stylesheets/bootstrap.min.css'/>
-    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+   <!-- <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>-->
 </head>
 <body>
 <div class="navbar navbar-default navbar-fixed-top nav-bar">
@@ -44,13 +46,13 @@
 
     <div class="container">
         <div class="row">
-            <form role="form" method="post" action="/SignUp">
+            <form action="">
                 <div class="col-lg-6"><br/><br/><br/>
 
                     <div class="form-group">
                         <label for="InputName">Enter Name</label>
                         <div class="input-group">
-                            <input type="text" class="form-control" name="InputName" id="InputName" placeholder="Enter Name" required>
+                            <input type="text" class="form-control"  name="InputName" id="InputName" placeholder="Enter Name" required>
                             <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
                         </div>
                     </div>
@@ -69,7 +71,8 @@
                             <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
                         </div>
                     </div>
-                    <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-right">
+                    <button type="submit" id="submit1" class="btn btn-info pull-right">Submit</button>
+
                 </div>
             </form>
 
@@ -81,7 +84,8 @@
     </div>
     <!-- Registration form - END -->
 
-</div>
 
+</div>
+<button id="farzan">fdfdf</button>
 </body>
 </html>

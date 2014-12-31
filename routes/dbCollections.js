@@ -3,7 +3,7 @@
  * GET home page.
  */
 
-mongodb://localhost/universitydb'
+
     var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/QuizeApp');
 

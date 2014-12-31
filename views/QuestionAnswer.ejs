@@ -2,6 +2,8 @@
 <html>
 <head>
     <title>QuestionAnswer</title>
+    <script src="/javascripts/jquery-1.11.2.min.js"></script>
+    <script src="/javascripts/QuestionAnswer.js"></script>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel='stylesheet' href='/stylesheets/bootstrap.min.css'/>
 </head>
@@ -55,17 +57,19 @@
 
 
 <div>
+    <form>
+        <span><label>Question1:</label>What is your country name?</span><br/>
+    <ol id="myList">
 
-    <span><label>Question1:</label>What is your country name?</span><br/>
-    <ol>
-
-        <li> <input type="radio" >Pakistan </li>
-        <li> <input type="radio" >India </li>
-        <li> <input type="radio" >SuadiaArab </li>
-        <li> <input type="radio" >America </li>
-        <li> <input type="radio" >Canada </li>
+        <li> <input type="radio" class="ans"  value="a1">Pakistan </li>
+        <li> <input type="radio" class="ans" value="a2">India </li>
+        <li> <input type="radio" class="ans" value="a3">SuadiaArab </li>
+        <li> <input type="radio" class="ans" value="a4">America </li>
+        <li> <input type="radio"  class="ans" value="a5">Canada </li>
 
     </ol>
+    <button id="submitAns">submit</button>
+        </form>
 </div>
 
 
