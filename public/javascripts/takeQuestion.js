@@ -1,6 +1,6 @@
 
 $(document).ready(function(){
-    ("#submit").click(function(){
+    $("#submit").click(function(){
       var question = $("#question").val();
       var answer1 = $("#answer1").val();
       var answer2 = $("#answer2").val();
@@ -10,7 +10,6 @@ $(document).ready(function(){
         $.ajax({
             method:"POST",
             url:"/takeQuestion",
-            data:data,
             data:data
         }).success(function(data , textstatus){
                 console.log(data)
