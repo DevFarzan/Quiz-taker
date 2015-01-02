@@ -11,14 +11,14 @@ var addQuizSchema = mongoose.Schema({
     quizDescription:String
 
 });
-var addQuizdb = mongoose.model('quizEntry' , addQuizSchema)
+var Quizdb = mongoose.model('quizEntry' , addQuizSchema)
 
 exports.addQuiz = function(req,res){
     var quizTitle = req.body.quizTitle
     var quizDescription = req.body.quizDescription
 
 
-    var quiz_info = new addQuizdb({
+    var quiz_info = new Quizdb({
         quizTitle:quizTitle,
         quizDescription:quizDescription
 
@@ -30,3 +30,9 @@ exports.addQuiz = function(req,res){
 
     });
 };
+exports.getAllQuiz=function(req,res){
+    Quizdb.find({},function(err,data){
+
+        res.send({err:err,data:data});
+    })
+}

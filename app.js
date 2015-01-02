@@ -7,7 +7,7 @@ var express = require('express');
 var routes = require('./routes');
 var user = require('./routes/user');
 var question = require('./routes/question');
-var quizEntry = require('./routes/addQuiz')
+var quizEntry = require('./routes/Quiz')
 var data = require('./routes/dbCollections')
 var http = require('http');
 var path = require('path');
@@ -50,6 +50,7 @@ app.get('/test',function(req , res){
 app.get('/addQuiz' ,function(req , res){
     res.render('addQuiz')
 })
+app.get('/getAllQuizInfo',quizEntry.getAllQuiz)
 
 app.get('/number/:FirstNumber/:SecondNumber',routes.calculate)
 app.post('/signIn',user.SignIn)

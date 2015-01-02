@@ -17,7 +17,11 @@ $(document).ready(function(){
             url:"/SignUp",
             data:data
         }).success(function(data, textstatus) {
-             console.log(data)
+                sessionStorage.setItem("signInUser" , JSON.stringify(data.data))
+
+                sessionStorage.getItem('sinInUser')
+            // console.log(data)
+
 
             }).error(function(err,textStatus){
                 console.log(err)

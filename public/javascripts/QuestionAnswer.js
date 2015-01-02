@@ -1,6 +1,12 @@
 
 $(document).ready(function(){
 
+
+
+   var session =  sessionStorage.getItem('sinInUser')
+if(session){
+
+
     $("#submitAns").click(function(){
 
         var ans = $("input[class=ans]:checked").val();
@@ -9,4 +15,7 @@ $(document).ready(function(){
 
         alert(ans);
     })
+}else{
+    window.location='/'
+}
 })
