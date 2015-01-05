@@ -9,6 +9,8 @@ $(document).ready(function(){
        // alert("aa");
         var username = $("#username").val();
         var password = $("#password").val();
+
+
         var data = {username:username,password:password}
         $.ajax({
             method:"POST",
@@ -27,5 +29,6 @@ $(document).ready(function(){
 
 
     })
+
 })
 

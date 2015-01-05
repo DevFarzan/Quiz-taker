@@ -41,16 +41,24 @@ app.get('/SignUp', function(req, res){
 app.get('/takeQuestion',function(req , res){
     res.render('takeQuestion')
 })
-app.get('/QuestionAnswer',function(req , res){
-    res.render('QuestionAnswer')
-})
+app.get('/QuestionAnswer/:id', quizEntry.QuestionAnswer)
+//app.get('/QuestionAnswer/:id',function(req , res){
+  //  res.render('QuestionAnswer')
+//})
 app.get('/test',function(req , res){
     res.send('farzan is a good boy')
 })
-app.get('/addQuiz' ,function(req , res){
+app.get('/addQuiz/' ,function(req , res){
     res.render('addQuiz')
 })
+
+app.post('getQuestionByQuizID',quizEntry.getQuestionByQuizID)
 app.get('/getAllQuizInfo',quizEntry.getAllQuiz)
+app.get('/startQuiz/:id',quizEntry.startQuiz)
+   // res.render('startQuiz')
+//})
+
+
 
 app.get('/number/:FirstNumber/:SecondNumber',routes.calculate)
 app.post('/signIn',user.SignIn)
@@ -59,6 +67,8 @@ app.post('/takeQuestion' ,question.takeQuestion)
 
 app.post('/SignUp',user.signUp)
 app.post('/addQuiz',quizEntry.addQuiz)
+app.get('/displayAllQuiz' ,quizEntry.displayAllQuiz)
+//app.get('/startQuiz',quizEntry. )
 
 
 http.createServer(app).listen(app.get('port'), function(){

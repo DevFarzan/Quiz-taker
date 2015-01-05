@@ -58,4 +58,7 @@ $(document).ready(function(){
     }).error(function(data , textstatus){
             console.log(err)
         })
+ }else{
+     window.location='/'
+ }
 })

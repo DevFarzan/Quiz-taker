@@ -7,6 +7,7 @@
     var mongoose = require('mongoose');
 
 var addQuizSchema = mongoose.Schema({
+    quizId:String,
     quizTitle:String,
     quizDescription:String
 
@@ -14,6 +15,7 @@ var addQuizSchema = mongoose.Schema({
 var Quizdb = mongoose.model('quizEntry' , addQuizSchema)
 
 exports.addQuiz = function(req,res){
+
     var quizTitle = req.body.quizTitle
     var quizDescription = req.body.quizDescription
 
@@ -35,4 +37,28 @@ exports.getAllQuiz=function(req,res){
 
         res.send({err:err,data:data});
     })
+}
+
+exports.displayAllQuiz = function(req , res){
+    Quizdb.find({},function(err,data){
+        res.render('displayAllQuiz', { data: data});
+    })
+}
+
+exports.startQuiz = function(req , res){
+    Quizdb.find({},function(err,data){
+        res.render('startQuiz', { data: data});
+    })
+}
+exports.QuestionAnswer = function(req , res){
+    Quizdb.find({},function(err,data){
+        res.render('QuestionAnswer', { data: data});
+    })
+}
+exports.getQuestionByQuizID = function(req ,res){
+    var quizId = req.body.quizId
+   Quizdb.find({quizId:quizId},function(err,data){
+       res.send({err:err,data:data})
+   })
+
 }

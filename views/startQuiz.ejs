@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <!--<title></title>-->
     <script src="/javascripts/jquery-1.11.2.min.js"></script>
-      <script src="/javascripts/signin.js"></script>
+    <script src="/javascripts/startQuiz.js"></script>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel='stylesheet' href='/stylesheets/bootstrap.min.css'/>
   </head>
@@ -60,24 +60,41 @@
     <div>
 
     <!--<div class="panel panel-primary index_textbox" align="center" >-->
+        <div class="container">
+            <div class="col-md-1"></div>
+            <div class="form-group col-md-10" style="margin-top: 15%;">
 
-        <div class="form-group index_textbox form">
-        <div class="form-group">
-        <label>Name:</label><br/>
-        <input type="text"  id="username" class="form-control" name="username" placeholder="Name" required="please inser field"><br/><br/>
-        <label>Password</label><br/>
-        <input type="password" id="password" class="form-control" name="password" placeholder="Password" required><br/>
-        <label class="checkbox">
-            <input type="checkbox" class="checkbox">Remember
-        </label><br/><br/>
-        <button  id="submit" class="btn">Submit</button>
-        <a type="submit" class="btn btn-group-lg" href="\Signup">SignUP</a>
-        </div>
-    </div>
-  </div>
+                <div class="form-horizontal">
+
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h1 class="panel-title">Start Quiz</h1>
+                        </div>
+                        <div class="panel-body">
+                            <% if (data.length) { %>
+                            <ul>
+                                <% data.forEach(function(a){ %>
+                                <a onclick="sendId('<%= a._id%>')" value="<%= a._id%>"><%= a.quizTitle %></a>
+                                <% }) %>
+                            </ul>
+                            <% } %>
+                            <a href="#" onclick="startQuiz()" class="btn btn-primary pull-right">Start Quiz</a>
+                        </div>
 
 
 
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+
+
+      </div>
 
   </body>
 </html>
