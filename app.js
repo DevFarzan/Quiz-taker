@@ -52,7 +52,7 @@ app.get('/addQuiz/' ,function(req , res){
     res.render('addQuiz')
 })
 
-app.post('getQuestionByQuizID',quizEntry.getQuestionByQuizID)
+app.post('/getQuestionByQuizID',question.getQuestionByQuizID)
 app.get('/getAllQuizInfo',quizEntry.getAllQuiz)
 app.get('/startQuiz/:id',quizEntry.startQuiz)
    // res.render('startQuiz')

@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
-  var session =  sessionStorage.getItem('signInUer')
- if(session){
+ // var session =  sessionStorage.getItem('signInUer')
+ //if(session){
     $.ajax({
         method:"GET",
         url:"/getAllQuizInfo"
@@ -41,9 +41,10 @@ $(document).ready(function(){
       var answer2 = $("#answer2").val();
       var answer3 = $("#answer3").val();
       var answer4 = $("#answer4").val();
+      var correctAnswer = $("#correctAnswer").val();
 
         console.log(quizId);
-        var data = { quizId:quizId ,question:question,answer1:answer2,answer2:answer2,answer3:answer3,answer4:answer4}
+        var data = { quizId:quizId ,question:question,answer1:answer2,answer2:answer2,answer3:answer3,answer4:answer4,correctAnswer:correctAnswer}
 
         $.ajax({
             method:"POST",
@@ -58,7 +59,7 @@ $(document).ready(function(){
     }).error(function(data , textstatus){
             console.log(err)
         })
- }else{
-     window.location='/'
- }
+ //}else{
+    // window.location='/'
+ //}
 })

@@ -55,10 +55,3 @@ exports.QuestionAnswer = function(req , res){
         res.render('QuestionAnswer', { data: data});
     })
 }
-exports.getQuestionByQuizID = function(req ,res){
-    var quizId = req.body.quizId
-   Quizdb.find({quizId:quizId},function(err,data){
-       res.send({err:err,data:data})
-   })
-
-}
