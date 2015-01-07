@@ -8,6 +8,7 @@ var routes = require('./routes');
 var user = require('./routes/user');
 var question = require('./routes/question');
 var quizEntry = require('./routes/Quiz')
+var Result = require('./routes/Result')
 var data = require('./routes/dbCollections')
 var http = require('http');
 var path = require('path');
@@ -52,9 +53,14 @@ app.get('/addQuiz/' ,function(req , res){
     res.render('addQuiz')
 })
 
+app.get('/Result',function(req , res){
+    res.render('Result')
+})
+
 app.post('/getQuestionByQuizID',question.getQuestionByQuizID)
 app.get('/getAllQuizInfo',quizEntry.getAllQuiz)
 app.get('/startQuiz/:id',quizEntry.startQuiz)
+app.post('/Result',Result.resultData);
    // res.render('startQuiz')
 //})
 

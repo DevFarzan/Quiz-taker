@@ -20,7 +20,7 @@ $(document).ready(function(){
 
                 sessionStorage.setItem("signInUser" , JSON.stringify(data.data))
 
-                sessionStorage.getItem('sinInUser')
+                sessionStorage.getItem('signInUser')
                 //console.log();
                 console.log(data)
             }).error(function(data , textstatus){

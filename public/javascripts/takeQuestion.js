@@ -36,15 +36,15 @@ $(document).ready(function(){
 
     $("#submit").click(function(){
       var quizId = $("#select1").val();
-      var question = $("#question").val();
+      var question = $("#Question").val();
       var answer1 = $("#answer1").val();
       var answer2 = $("#answer2").val();
       var answer3 = $("#answer3").val();
       var answer4 = $("#answer4").val();
-      var correctAnswer = $("#correctAnswer").val();
+      var correctAnswer = $(('input[type=radio]:checked')).val()
 
         console.log(quizId);
-        var data = { quizId:quizId ,question:question,answer1:answer2,answer2:answer2,answer3:answer3,answer4:answer4,correctAnswer:correctAnswer}
+        var data = { quizId:quizId ,question:question,answer1:answer1,answer2:answer2,answer3:answer3,answer4:answer4,correctAnswer:correctAnswer}
 
         $.ajax({
             method:"POST",

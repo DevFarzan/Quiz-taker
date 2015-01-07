@@ -44,3 +44,6 @@ a {
     text-align: center;
     height: 0;
 }
+#submitError {
+    color: red;
+    display: none; }

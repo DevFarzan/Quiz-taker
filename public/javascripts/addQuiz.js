@@ -3,8 +3,8 @@ $(document).ready(function(){
 
 
 
- var session =    sessionStorage.getItem('sinInUser')
-if(session){
+ //var session =    sessionStorage.getItem('sinInUser')
+//if(session){
 
 
 
@@ -25,8 +25,8 @@ if(session){
             })
     })
 
-}else{
+//}//else{
 
-    window.location='/'
-}
+    //window.location='/'
+//}
 })
