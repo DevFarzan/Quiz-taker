@@ -83,15 +83,15 @@ $(document).ready(function(){
 
     })
     $("#result").click(function(){
-        var decision = getRadioInfo();
+       /* var decision = getRadioInfo();
         if(decision==null){
             $("#submitError").style.display = "block";
         }
         else{
             // $("#submitError").style.display = "none";
-        }
+        }*/
 
-        checkAnswer(decision);
+        //checkAnswer(decision);
 
         var user = JSON.parse(sessionStorage.getItem('signInUser'))[0];
 
@@ -119,7 +119,7 @@ $(document).ready(function(){
     })
 function checkAnswer(decision){
     if(decision==recieveData.data[current_question].rightAnswer)
-    if(correctAnswer==true)
+    if(decision==true)
     {
         correctAnswer.push(true)
     }

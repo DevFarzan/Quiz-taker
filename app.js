@@ -56,11 +56,15 @@ app.get('/addQuiz/' ,function(req , res){
 app.get('/Result',function(req , res){
     res.render('Result')
 })
+app.get('/dashboard',function(req , res){
+    res.render('dashboard')
+})
 
 app.post('/getQuestionByQuizID',question.getQuestionByQuizID)
 app.get('/getAllQuizInfo',quizEntry.getAllQuiz)
 app.get('/startQuiz/:id',quizEntry.startQuiz)
 app.post('/Result',Result.resultData);
+app.post('/dashboard',Result.getUserData)
    // res.render('startQuiz')
 //})
 
